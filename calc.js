@@ -31,6 +31,8 @@ if (mathSymbol=== "-"){
 if (mathSymbol=== "*"){
 	console.log(num1 * num2)
 };
+if (mathSymbol=== "/")
+	console.log(num1 / num2)
 
 if (mathSymbol=== "sq"){
 	console.log(Math.sqrt(num1))
