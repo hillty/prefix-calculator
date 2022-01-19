@@ -1,5 +1,4 @@
 const readline = require('readline');
-const { ReadableStreamBYOBRequest } = require('stream/web');
 
 const reader = readline.createInterface({
   input: process.stdin,
@@ -18,7 +17,7 @@ reader.question("What would you like to calculate?", function(input){
 // console.log('mathSymbol', mathSymbol);
 // console.log('num1', num1);
 // console.log('num2', num2);
-let sq = Math.sqrt(num1)
+let sqrt = Math.sqrt(num1)
 
 if (mathSymbol=== "+"){
 	console.log(num1 + num2)
@@ -31,14 +30,21 @@ if (mathSymbol=== "-"){
 if (mathSymbol=== "*"){
 	console.log(num1 * num2)
 };
-if (mathSymbol=== "/")
+
+if (mathSymbol=== "/"){
 	console.log(num1 / num2)
+};
+
+if (mathSymbol=== "sqrt"){
+	console.log(Math.sqrt(num1))
+};
 
 if (mathSymbol=== "sq"){
-	console.log(Math.sqrt(num1))
+	console.log(num1 * num1)
 };
 
 	// This line closes the connection to the command line interface.
 	reader.close()
 
 });
+
